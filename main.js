@@ -1,5 +1,43 @@
 // Your code here.
 
+const getFirstName = function (unknown) {
+  unknown.firstName
+
+  return unknown.firstName
+}
+
+const getLastName = function (unknown) {
+  unknown.lastName
+
+  return unknown.lastName
+}
+
+const getFullName = function (unknown) {
+  unknown.getFullName = unknown.firstName + ' ' + unknown.lastName
+
+  return unknown.getFullName
+}
+
+const setFirstName = function (unknown, name) {
+  unknown.firstName = name
+
+  return unknown.firstName
+}
+
+const setAge = function (unknown, unknown2) {
+  unknown.age = unknown2
+
+  return unknown.age
+}
+
+const giveBirthday = function (person) {
+  person.age++ === 0;
+
+  return person.age
+}
+
+
+
 
 
 
