@@ -1,46 +1,51 @@
 // Your code here.
 
 const getFirstName = function (unknown) {
-  unknown.firstName
-
   return unknown.firstName
 }
 
 const getLastName = function (unknown) {
-  unknown.lastName
-
   return unknown.lastName
 }
 
 const getFullName = function (unknown) {
-  unknown.getFullName = unknown.firstName + ' ' + unknown.lastName
-
-  return unknown.getFullName
+  return unknown.getFullName = unknown.firstName + ' ' + unknown.lastName
 }
 
 const setFirstName = function (unknown, name) {
-  unknown.firstName = name
+  return  unknown.firstName = name
 
-  return unknown.firstName
 }
+// return ${person.firstName} ${person.lastName};
+// string interpolation
 
-const setAge = function (unknown, unknown2) {
-  unknown.age = unknown2
-
-  return unknown.age
+const setAge = function (unknown, age) {
+  return unknown.age = age
 }
 
 const giveBirthday = function (person) {
-  person.age++ === 0;
-
-  return person.age
+  if ('age' in person) {
+    person.age++
+  } else {
+    person.age = 1;
+  }
 }
 
+const marry = function(person1, person2) {
+  person1.married = true;
+  person2.married = true;
 
+  person1.spouseName = person2.firstName + ' ' + person2.lastName;
+  person2.spouseName = person1.firstName + ' ' + person1.lastName;
+}
 
+const divorce = function (person1, person2) {
+  person1.married = false;
+  person2.married = false;
 
-
-
+  delete person1.spouseName
+  delete person2.spouseName 
+}
 
 // Our code here. Don't touch!
 if (typeof getFirstName === 'undefined') {
