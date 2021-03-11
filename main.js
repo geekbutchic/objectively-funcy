@@ -1,17 +1,15 @@
 // Your code here.
 
 getFirstName = (value) => {
-  console.log(value.firstName);
   return value.firstName;
 };
 
 getLastName = (value) => {
-  console.log(value.lastName);
   return value.lastName;
 };
 
 getFullName = (value) => {
-  return (value.getFullName = value.firstName + " " + value.lastName);
+  return (value.getFullName = `${value.firstName} ${value.lastName}`);
 };
 
 setFirstName = (value, name) => {
@@ -35,8 +33,8 @@ marry = (person1, person2) => {
   person1.married = true;
   person2.married = true;
 
-  person1.spouseName = person2.firstName + " " + person2.lastName;
-  person2.spouseName = person1.firstName + " " + person1.lastName;
+  person1.spouseName = `${person2.firstName} ${person2.lastName}`;
+  person2.spouseName = `${person1.firstName} ${person1.lastName}`;
 };
 
 divorce = (person1, person2) => {
